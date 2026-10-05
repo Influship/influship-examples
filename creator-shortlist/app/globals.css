@@ -1,0 +1,256 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #183326;
+  color-scheme: light;
+  background: #f5f5ef;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  width: min(100% - 40px, 900px);
+  margin: auto;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid #d8ddd3;
+}
+header a {
+  font-weight: 750;
+  text-decoration: none;
+}
+header a span {
+  font-weight: 400;
+  color: #66766a;
+}
+.tag {
+  padding: 8px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+  background: #e5ebdf;
+  border-radius: 30px;
+}
+.intro {
+  max-width: 650px;
+  padding: 54px 0 28px;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 1.8px;
+}
+h1 {
+  margin: 18px 0;
+  font-size: clamp(36px, 7vw, 58px);
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+.intro > p:not(.eyebrow) {
+  max-width: 550px;
+  line-height: 1.7;
+  color: #5a6c5f;
+}
+.intro > .setup-links {
+  font-size: 13px;
+}
+form {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #d8ddd3;
+  border-radius: 14px;
+}
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 650;
+}
+textarea {
+  width: 100%;
+  padding: 15px;
+  font: inherit;
+  line-height: 1.6;
+  color: #183326;
+  resize: vertical;
+  border: 1px solid #cad2c6;
+  border-radius: 8px;
+}
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #81ac68;
+  outline-offset: 3px;
+}
+.form-footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.form-footer p,
+.results-header p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #66766a;
+}
+button {
+  padding: 13px 20px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #224e36;
+  border: 1px solid #224e36;
+  border-radius: 8px;
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.secondary {
+  color: #224e36;
+  background: transparent;
+}
+.results-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 0 18px;
+}
+h2 {
+  margin: 0 0 7px;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+}
+.results {
+  display: grid;
+  gap: 14px;
+}
+article {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #d8ddd3;
+  border-radius: 12px;
+}
+.candidate-heading {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.rank {
+  font-size: 12px;
+  color: #788977;
+}
+h3 {
+  margin: 0 0 5px;
+  font-size: 19px;
+}
+.candidate-heading a,
+.candidate-heading p {
+  margin: 0;
+  font-size: 13px;
+  color: #5a6c5f;
+}
+.score {
+  margin-left: auto;
+  text-align: right;
+}
+.score strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+}
+.score span {
+  font-size: 10px;
+  color: #66766a;
+}
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 0;
+  font-size: 12px;
+  color: #5a6c5f;
+  border-bottom: 1px solid #e6e9e0;
+}
+ul {
+  padding-left: 20px;
+  margin: 17px 0 0;
+}
+li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #405947;
+}
+.notice {
+  font-size: 12px;
+  color: #856027;
+}
+.status {
+  padding: 20px;
+  line-height: 1.6;
+  background: #e8ecdf;
+  border-radius: 10px;
+}
+.error {
+  padding: 18px;
+  color: #853d31;
+  background: #f6e8e1;
+  border-radius: 10px;
+}
+.fine-print {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #66766a;
+  overflow-wrap: anywhere;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 36px 0;
+  margin-top: 28px;
+  font-size: 12px;
+  color: #66766a;
+  border-top: 1px solid #d8ddd3;
+}
+@media (max-width: 600px) {
+  header a span,
+  .tag {
+    display: none;
+  }
+  .intro {
+    padding-top: 35px;
+  }
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  article {
+    padding: 18px;
+  }
+  .candidate-heading {
+    gap: 10px;
+  }
+  .score {
+    min-width: 75px;
+  }
+}

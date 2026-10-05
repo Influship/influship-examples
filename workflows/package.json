@@ -1,0 +1,25 @@
+{
+  "name": "influship-cookbook-workflows",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test workflows.test.ts",
+    "shortlist": "node --experimental-strip-types cli.ts shortlist",
+    "lookalikes": "node --experimental-strip-types cli.ts lookalikes",
+    "score-list": "node --experimental-strip-types cli.ts score-list"
+  },
+  "dependencies": {
+    "influship": "0.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2"
+  }
+}
