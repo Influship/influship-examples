@@ -1,0 +1,22 @@
+name: Example problem
+description: Report setup, behavior or documentation issues. Never include credentials.
+body:
+  - type: dropdown
+    id: example
+    attributes:
+      label: Example
+      options: [creator-shortlist, workflows]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: What happened?
+      description: Include Node/pnpm versions, exact command, expected behavior and any HTTP status or request ID. Remove API keys and private data.
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Which guide did you follow?
+      description: Link the recipe and describe any unclear step.
