@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="creator-research">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creator research · Influship example</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <span class="wordmark">Influship <span>example app</span></span
+      ><span>Instagram creator research</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">From brief to shortlist</p>
+        <h1>Find creators for your next campaign.</h1>
+        <p>Describe the content you need, review the evidence, and keep your selection.</p>
+      </section>
+      <form id="search-form" class="search-panel">
+        <label for="brief">Campaign brief</label>
+        <textarea
+          id="brief"
+          required
+          maxlength="500"
+          rows="2"
+          placeholder="Fitness creators who teach practical home workouts"
+        ></textarea>
+        <div class="search-actions">
+          <p>Five results per search · up to $0.35</p>
+          <button id="search-button" type="submit">Find creators</button>
+        </div>
+      </form>
+      <p id="status" role="status" aria-live="polite">
+        Enter a brief to start. Searches run only when you submit.
+      </p>
+      <div class="workspace">
+        <section aria-labelledby="results-title">
+          <div class="section-heading">
+            <h2 id="results-title">Creators</h2>
+            <span id="result-count"></span>
+          </div>
+          <div id="results">
+            <div class="empty">Your results and their match evidence will appear here.</div>
+          </div>
+        </section>
+        <aside>
+          <section class="selection" aria-labelledby="selection-title">
+            <h2 id="selection-title">Your shortlist <span id="selection-count">0 / 8</span></h2>
+            <ul id="selected"></ul>
+            <form id="save-form">
+              <label for="name">List name</label>
+              <input id="name" required maxlength="80" placeholder="Home fitness launch">
+              <label for="notes">Review notes</label
+              ><textarea
+                id="notes"
+                maxlength="2000"
+                rows="3"
+                placeholder="What should your team review next?"
+              ></textarea><button id="save-button" type="submit" disabled>Save shortlist</button>
+            </form>
+            <p class="hint">
+              Saving and reopening lists costs no credits. Reopened lists contain handles and notes;
+              metrics belong to the search that returned them.
+            </p>
+          </section>
+          <section class="saved" aria-labelledby="saved-title">
+            <div class="section-heading">
+              <h2 id="saved-title">Saved lists</h2>
+              <button type="button" class="secondary" id="load-lists">Load lists</button>
+            </div>
+            <div id="saved-lists"><p class="hint">Load lists saved under your API account.</p></div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      Local example · your API key stays on the Node.js server.
+      <a href="https://docs.influship.com/guides/saved-shortlists">Shortlist API guide ↗</a>
+    </footer>
+  </body>
+</html>
